@@ -2,8 +2,8 @@ import { ethers } from "https://esm.sh/ethers@6.13.4";
 import EthereumProvider from "https://esm.sh/@walletconnect/ethereum-provider@2.17.2";
 
 // ВСТАВ ТУТ СВОЇ ДАНІ
-const CONTRACT_ADDRESS = "PASTE_CONTRACT_ADDRESS_HERE";
-const PROJECT_ID = "PASTE_WALLETCONNECT_PROJECT_ID_HERE";
+const CONTRACT_ADDRESS = "0x7DD4901bC327b114A59E032537688a97f30FFe41";
+const PROJECT_ID = "fe55ea601c3e7e0925c0b33723d6b158";
 
 const CHAIN_ID = 4663;
 const CHAIN_ID_HEX = "0x1237";
