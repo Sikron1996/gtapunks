@@ -70,7 +70,25 @@
 
   <footer>© 2026 · THE GTA PUNKS · ROBINHOOD CHAIN</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
-  <script src="app.js"></script>
+  
+  <div id="walletModal" class="wallet-modal hidden">
+    <div class="wallet-box">
+      <button id="closeWalletModal" class="wallet-close">×</button>
+      <h3>Connect Wallet</h3>
+      <p>Choose a wallet. Mobile wallets work through their built-in browser.</p>
+      <div class="wallet-list">
+        <button data-wallet="any">Browser Wallet</button>
+        <button data-wallet="metamask">MetaMask</button>
+        <button data-wallet="rabby">Rabby</button>
+        <button data-wallet="trust">Trust Wallet</button>
+        <button data-wallet="coinbase">Coinbase Wallet</button>
+        <button data-wallet="phantom">Phantom EVM</button>
+        <button data-wallet="walletconnect">WalletConnect</button>
+      </div>
+      <small>WalletConnect/AppKit можна додати окремо через Project ID.</small>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
 </body>
 </html>
