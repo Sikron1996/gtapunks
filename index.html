@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE GTA PUNKS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <header class="nav">
+    <div class="brand">
+      <div class="logo">GTA</div>
+      <span>THE GTA PUNKS</span>
+    </div>
+    <button id="connectBtn" class="small-btn">Connect Wallet</button>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="copy">
+        <div class="tag">ROBINHOOD CHAIN DROP</div>
+        <h1>Meet<br><span>THE GTA</span><br>PUNKS</h1>
+        <p>10,000 bold cartoon punks living on Robinhood Chain. First NFT is free, every next mint is 0.00005 ETH.</p>
+        <div class="links">
+          <a id="explorerLink" href="https://robinhoodchain.blockscout.com/address/0x4A33DE0D7e4ADccC1e812D53671b974d693a9486" target="_blank">Explorer</a>
+          <a id="openseaLink" href="#" target="_blank">OpenSea</a>
+          <a id="twitterLink" href="#" target="_blank">X / Twitter</a>
+        </div>
+      </div>
+
+      <div class="grid-card">
+        <img src="preview.jpeg" alt="THE GTA PUNKS preview" />
+      </div>
+    </section>
+
+    <section class="mint-zone">
+      <div class="stats-card">
+        <div class="topline">
+          <h2>Mint Progress</h2>
+          <span class="live-dot"><i></i> Live on-chain</span>
+        </div>
+        <div class="stats">
+          <div><span>MINTED</span><b id="minted">0</b></div>
+          <div><span>REMAINING</span><b id="remaining">10000</b></div>
+          <div><span>PRICE</span><b>FREE / 0.00005 ETH</b></div>
+        </div>
+        <div class="bar"><div id="progressBar"></div></div>
+        <div class="bar-info"><span id="percent">0% minted</span><span id="supplyText">0 / 10,000</span></div>
+      </div>
+
+      <div class="mint-card">
+        <h3>Mint THE GTA PUNKS</h3>
+        <div class="row"><span>Network</span><b>Robinhood Chain</b></div>
+        <div class="row"><span>Supply</span><b>10,000</b></div>
+        <div class="row"><span>Price</span><b id="priceText">FREE</b></div>
+        <div class="counter">
+          <button id="minusBtn">−</button>
+          <strong id="amount">1</strong>
+          <button id="plusBtn">+</button>
+        </div>
+        <button id="mintBtn" class="mint-btn">Connect Wallet</button>
+        <p id="status">not connected</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 · THE GTA PUNKS · ROBINHOOD CHAIN</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
