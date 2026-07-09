@@ -1,91 +1,71 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>THE GTA PUNKS</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GTAP Token</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="noise"></div>
-  <div class="glow glow-a"></div>
-  <div class="glow glow-b"></div>
-
-  <header class="nav">
-    <div class="brand">
-      <div class="logo">GTA</div>
-      <span>THE GTA PUNKS</span>
-    </div>
-    <button id="connectBtn" class="small-btn">Connect Wallet</button>
+  <div class="bg"></div>
+  <header class="topbar">
+    <div class="brand"><img src="logo.png" alt="GTAP" /><span>Grand Theft Auto Punk</span></div>
+    <button id="topConnect" class="smallBtn">Connect Wallet</button>
   </header>
 
   <main class="wrap">
     <section class="hero">
       <div class="copy">
-        <div class="tag">ROBINHOOD CHAIN DROP</div>
-        <h1>Meet<br><span>THE GTA</span><br>PUNKS</h1>
-        <p>To mark the release of the world's most anticipated game, GTA VI, we are launching the Grand Theft Auto Punks collection. First NFT is free, every next mint is 0.00005 ETH.</p>
-        <div class="links">
-          <a id="explorerLink" href="https://robinhoodchain.blockscout.com/address/0x7DD4901bC327b114A59E032537688a97f30FFe41" target="_blank">Explorer</a>
-          <a id="openseaLink" href="https://opensea.io/collection/gtapun" target="_blank">OpenSea</a>
-          <a id="twitterLink" href="https://x.com/punk_gta" target="_blank">X / Twitter</a>
+        <p class="eyebrow">ROBINHOOD CHAIN • ERC20</p>
+        <h1>Buy <span>GTAP</span><br/>Token</h1>
+        <p class="sub">Grand Theft Auto Punk token for the GTA Punks ecosystem. Fixed mint price, on-chain supply, simple claim.</p>
+        <div class="actions">
+          <a id="explorerLink" class="ghost" target="_blank" rel="noreferrer">View Contract</a>
+          <button id="connectBtn" class="primary">Connect Wallet</button>
         </div>
       </div>
-
-      <div class="grid-card">
-        <img src="preview.jpeg" alt="THE GTA PUNKS preview" />
+      <div class="logoCard">
+        <img src="logo.png" alt="GTAP Logo" />
+        <div class="ticker">GTAP</div>
       </div>
     </section>
 
-    <section class="mint-zone">
-      <div class="stats-card">
-        <div class="topline">
-          <h2>Mint Progress</h2>
-          <span class="live-dot"><i></i> Live on-chain</span>
-        </div>
-        <div class="stats">
-          <div><span>MINTED</span><b id="minted">0</b></div>
-          <div><span>REMAINING</span><b id="remaining">10000</b></div>
-          <div><span>PRICE</span><b>FREE / 0.00005 ETH</b></div>
-        </div>
-        <div class="bar"><div id="progressBar"></div></div>
-        <div class="bar-info"><span id="percent">0% minted</span><span id="supplyText">0 / 10,000</span></div>
+    <section class="panel">
+      <div class="stats">
+        <div><label>Sold</label><b id="soldText">0</b></div>
+        <div><label>Remaining</label><b id="remainingText">10,000,000</b></div>
+        <div><label>Your Balance</label><b id="balanceText">0</b></div>
+        <div><label>Price</label><b id="unitPriceText">0.0000056 ETH</b></div>
       </div>
 
-      <div class="mint-card">
-        <h3>Mint THE GTA PUNKS</h3>
-        <div class="row"><span>Network</span><b>Robinhood Chain</b></div>
-        <div class="row"><span>Supply</span><b>10,000</b></div>
-        <div class="row"><span>Price</span><b id="priceText">FREE</b></div>
-        <div class="counter">
-          <button id="minusBtn">−</button>
-          <strong id="amount">1</strong>
-          <button id="plusBtn">+</button>
+      <div class="buyBox">
+        <div class="row"><span>Amount</span><span id="totalPriceText">0.0000056 ETH</span></div>
+        <div class="amountBox">
+          <button id="minus">−</button>
+          <input id="amount" value="1" inputmode="numeric" />
+          <button id="plus">+</button>
         </div>
-        <button id="mintBtn" class="mint-btn">Connect Wallet</button>
-        <p id="status">not connected</p>
+        <button id="buyBtn" class="buy">Buy GTAP</button>
+        <p id="status">Insert contract address in app.js</p>
       </div>
+
+      <div class="progress"><span id="progressBar"></span></div>
+      <div class="progressText"><span id="percentText">0%</span><span>10,000,000 GTAP</span></div>
+    </section>
+
+    <section class="infoGrid">
+      <div><h3>Fixed Price</h3><p>1 GTAP = 0.0000056 ETH</p></div>
+      <div><h3>Total Supply</h3><p>10,000,000 GTAP</p></div>
+      <div><h3>Network</h3><p>Robinhood Chain</p></div>
     </section>
   </main>
 
-  <footer>© 2026 · THE GTA PUNKS · ROBINHOOD CHAIN</footer>
-
-  
-  <div id="walletModal" class="wallet-modal hidden">
-    <div class="wallet-box">
-      <button id="closeWalletModal" class="wallet-close">×</button>
-      <h3>Connect Wallet</h3>
-      <p>Choose a wallet. Mobile wallets work through their built-in browser.</p>
-      <div class="wallet-list">
-        <button data-wallet="any">Browser Wallet</button>
-        <button data-wallet="metamask">MetaMask</button>
-        <button data-wallet="rabby">Rabby</button>
-        <button data-wallet="trust">Trust Wallet</button>
-        <button data-wallet="coinbase">Coinbase Wallet</button>
-        <button data-wallet="phantom">Phantom EVM</button>
-        <button data-wallet="walletconnect">WalletConnect</button>
-      </div>
-      <small>WalletConnect/AppKit можна додати окремо через Project ID.</small>
+  <div id="walletModal" class="modal hidden">
+    <div class="modalBox">
+      <button id="closeModalBtn" class="x">×</button>
+      <h2>Connect Wallet</h2>
+      <button id="browserWalletBtn">Browser Wallet</button>
+      <button id="walletConnectBtn">WalletConnect</button>
     </div>
   </div>
 
