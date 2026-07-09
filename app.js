@@ -1,7 +1,7 @@
 import { ethers } from "https://esm.sh/ethers@6.13.4";
 import EthereumProvider from "https://esm.sh/@walletconnect/ethereum-provider@2.17.2";
 
-const CONTRACT_ADDRESS = "0x6CB27773611B9BDD28CAC5032d6abA17A74Fbe773";
+const CONTRACT_ADDRESS = "0x6CB277736119BDD28CAC5032d6abA17A74Fbe773";
 const PROJECT_ID = "fe55ea601c3e7e0925c0b33723d6b158";
 
 const CHAIN_ID = 4663;
